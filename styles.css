@@ -1,0 +1,203 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    /* Background and text transition */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 2px solid var(--border-color);
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#nav-links {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    /* No underlines */
+    font-family: inherit;
+    font-weight: bold;
+    /* Make links bold */
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: var(--link-hover-color);
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 15px;
+}
+
+h2 {
+    font-size: 1.4em;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-color);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    border-top: 2px solid var(--border-color);
+}
+
+/* Light Theme */
+.light-theme {
+    --background: #f4f4f4;
+    --text-color: #333;
+    --header-bg: #fff;
+    --header-text: #000;
+    --link-color: #007acc;
+    /* Light mode link color */
+    --link-hover-color: #005a99;
+    /* Light mode hover color */
+    --border-color: #007acc;
+    --heading-color: #005a99;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+/* Dark Theme */
+.dark-theme {
+    --background: #1e1e1e;
+    --text-color: #cfcfcf;
+    --header-bg: #252526;
+    --header-text: #cfcfcf;
+    --link-color: #79d8f2;
+    /* Dark mode link color */
+    --link-hover-color: #5a99cc;
+    /* Dark mode hover color */
+    --border-color: #9cdcfe;
+    --heading-color: #569cd6;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+/* Connect Section Links Styles */
+#connect a {
+    text-decoration: none;
+    /* Remove underline */
+    font-weight: bold;
+    /* Make links bold */
+}
+
+#whatsapp {
+    color: #25D366;
+    /* WhatsApp green */
+}
+
+#linkedin {
+    color: #0077B5;
+    /* LinkedIn blue */
+}
+
+#github {
+    color: #ffffff;
+    /* GitHub white in dark mode */
+}
+
+#github.light {
+    color: #000000;
+    /* GitHub black in light mode */
+}
+
+#connect a:hover {
+    color: var(--link-hover-color);
+    /* Same hover color */
+}
+
+/* Email Link Styling */
+#email {
+    color: #cfcfcf;
+    /* Email color in dark mode */
+}
+
+#email.light {
+    color: #000000;
+    /* Email color in light mode */
+}
+
+/* Theme Switcher Styles */
+#theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    /* Increase size of the sun emoji */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* Smooth scaling */
+}
+
+#theme-switcher:hover {
+    transform: scale(1.1);
+    /* Slight scaling on hover */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    #theme-switcher {
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
+    }
+}
