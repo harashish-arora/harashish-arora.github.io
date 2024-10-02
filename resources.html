@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Har Ashish Arora/Resources</title>
+    <title>Har Ashish Arora</title>
+    <meta name="description" content="Welcome to Har Ashish Arora's website.">
     <link rel="stylesheet" href="styles.css">
-
     <script>
         (function () {
             const userPreference = localStorage.getItem('theme');
@@ -24,7 +24,17 @@
         })();
     </script>
 
-    <script src="script.js"></script>
+    <script>
+        // Inline script to check the theme before rendering the page
+        (function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-theme');
+            } else {
+                document.documentElement.classList.add('light-theme');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -34,11 +44,16 @@
             <p>// Coming Soon!</p>
         </div>
         <div class="top-bar">
+            <div id="clock"></div>
             <button id="theme-switcher" aria-label="Toggle Theme">
-                🌞
+                <span class="light-theme-icon">⏾</span> <span class="dark-theme-icon">☀️</span>
             </button>
         </div>
     </header>
+
+    <div id="clock"
+        style="position: fixed; top: 10px; left: 10px; font-family: 'Courier New', Courier, monospace; font-size: 1.1em; color: var(--text-color);">
+    </div>
 
     <main>
         <section id="nav-links">
@@ -52,10 +67,10 @@
 
         <section id="connect">
             <h2>/* Resources */</h2>
-            <p>// I'm still working on the website. For now, please use my OneDrive link:</p>
-            <a href="https://csciitd-my.sharepoint.com/:f:/g/personal/ee1240904_iitd_ac_in/EjbVvhaGIoNLtw-X9iLG1iABQmTFory_GoOMKPuNWXUAvw?e=TxWqgJ"
-                id="link" target="_blank">[1st Year - 2024-2025]</a>
+            <p>// I'm still working on the website. For now, you can refer to my OneDrive link:</p>
+            <a href="tinyurl.com/ashishiitd" id="link" target="_blank">[First Year - 2024-25]</a>
         </section>
+
     </main>
 
     <footer>
@@ -63,7 +78,7 @@
     </footer>
 
     <button id="theme-switcher" aria-label="Toggle Theme">
-        🌞
+        <span class="light-theme-icon">⏾</span> <span class="dark-theme-icon">☀️</span>
     </button>
 
     <script src="script.js"></script>
