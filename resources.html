@@ -7,6 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Har Ashish Arora/Resources</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        (function () {
+            const userPreference = localStorage.getItem('theme');
+            if (userPreference) {
+                document.documentElement.classList.add(userPreference + '-theme');
+            } else {
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (systemPrefersDark) {
+                    document.documentElement.classList.add('dark-theme');
+                } else {
+                    document.documentElement.classList.add('dark-theme'); // Default to dark theme
+                }
+            }
+        })();
+    </script>
 
     <script>
         // Inline script to check the theme before rendering the page
