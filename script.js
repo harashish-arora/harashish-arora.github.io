@@ -37,14 +37,17 @@ document.getElementById('wisdom-quote').textContent = randomQuote;
 
 function updateClock() {
     const clockElement = document.getElementById('clock');
-    if (!clockElement) return;  // Avoid errors if the clock element is missing
+    if (!clockElement) return; // Avoid errors if the clock element is missing
 
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Month is 0-based
+    const year = now.getFullYear();
 
-    const currentTime = `${hours}:${minutes}:${seconds}`;
+    const currentTime = `${hours}:${minutes}:${seconds} ${day}/${month}/${year}`;
     clockElement.textContent = currentTime;
 }
 

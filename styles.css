@@ -257,3 +257,25 @@ footer {
 .dark-theme .top-bar {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+.light-theme-icon {
+    display: inline;
+    /* Show by default */
+}
+
+.dark-theme-icon {
+    display: none;
+    /* Hide by default */
+}
+
+.dark-theme {
+    .light-theme-icon {
+        display: none;
+        /* Hide in dark theme */
+    }
+
+    .dark-theme-icon {
+        display: inline;
+        /* Show in dark theme */
+    }
+}
