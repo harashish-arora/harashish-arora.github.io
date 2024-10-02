@@ -34,3 +34,21 @@ const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 // Display the quote in the #wisdom-quote element
 document.getElementById('wisdom-quote').textContent = randomQuote;
+
+function updateClock() {
+    const clockElement = document.getElementById('clock');
+    if (!clockElement) return;  // Avoid errors if the clock element is missing
+
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    const currentTime = `${hours}:${minutes}:${seconds}`;
+    clockElement.textContent = currentTime;
+}
+
+// Initial call to display the time immediately
+updateClock();
+// Update the time every second
+setInterval(updateClock, 1000);
