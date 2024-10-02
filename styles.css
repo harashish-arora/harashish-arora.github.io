@@ -197,3 +197,22 @@ footer {
         right: 10px;
     }
 }
+
+#words-of-wisdom {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+#words-of-wisdom h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#wisdom-quote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: var(--text-color);
+}
