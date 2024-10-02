@@ -7,6 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Har Ashish Arora</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script>
+        // Inline script to check the theme before rendering the page
+        (function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-theme');
+            } else {
+                document.documentElement.classList.add('light-theme');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -14,7 +26,6 @@
         <div class="container">
             <h1>// Hello World</h1>
             <p>// Welcome to the website of Har Ashish Arora, EE Undergrad at IIT Delhi.</p>
-            <!-- Short description added -->
         </div>
     </header>
 
@@ -34,17 +45,18 @@
 
         <section id="about-me">
             <h2>/* About Me */</h2>
-            <p>// I am Har Ashish Arora, an EE Undergrad at IIT Delhi. I hope that this site helps you - I have made it for the benefit of myself as well as for others.</p>
+            <p>// I am Har Ashish Arora, an EE Undergrad at IIT Delhi. I hope that this site helps you - I have made it
+                for the benefit of myself as well as for others.</p>
         </section>
 
         <section id="connect">
             <h2>/* Connect */</h2>
             <p>// You can reach out to me on:</p>
             <ul>
-                <a href="https://github.com/harashish-arora" id="github" class="light">[GitHub]</a> |
-                <a href="https://linkedin.com/in/har-ashish-arora" id="linkedin">[LinkedIn]</a> |
-                <a href="mailto:ee1240904@iitd.ac.in" id="email" class="light">[Email]</a> |
-                <a href="https://wa.me/918447601820" id="whatsapp">[WhatsApp]</a>
+                <li><a href="https://github.com/harashish-arora" id="github">[GitHub]</a></li>
+                <li><a href="https://linkedin.com/in/har-ashish-arora" id="linkedin">[LinkedIn]</a></li>
+                <li><a href="mailto:ee1240904@iitd.ac.in" id="email">[Email]</a></li>
+                <li><a href="https://wa.me/918447601820" id="whatsapp">[WhatsApp]</a></li>
             </ul>
         </section>
     </main>

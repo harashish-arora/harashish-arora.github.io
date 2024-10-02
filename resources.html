@@ -5,14 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Resources - Your Website Title</title>
+    <title>Har Ashish Arora/Resources</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script>
+        // Inline script to check the theme before rendering the page
+        (function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-theme');
+            } else {
+                document.documentElement.classList.add('light-theme');
+            }
+        })();
+    </script>
 </head>
 
 <body>
     <header>
         <div class="container">
-            <h1>// My Code Space</h1>
+            <h1>// Resources</h1>
+            <p>// Here, you'll find my resources for the first year at IIT Delhi.</p>
         </div>
     </header>
 
@@ -25,20 +38,16 @@
                 </ul>
             </nav>
         </section>
-        <section id="info">
+
+        <section id="connect">
             <h2>/* Resources */</h2>
-            <p>// Here are some resources that I find useful:</p>
-            <ul>
-                <li><a href="hello.pdf" target="_blank">Download Hello PDF</a></li> <!-- Link to hello.pdf -->
-                <li><a href="https://www.example.com" target="_blank">Useful Website 1</a></li>
-                <li><a href="https://www.example.com" target="_blank">Useful Website 2</a></li>
-                <li><a href="https://www.example.com" target="_blank">Useful Website 3</a></li>
-            </ul>
+            <p>// I'm still working on the website. For now, please use my OneDrive link:</p>
+            <a href="https://csciitd-my.sharepoint.com/:f:/g/personal/ee1240904_iitd_ac_in/EjbVvhaGIoNLtw-X9iLG1iABQmTFory_GoOMKPuNWXUAvw?e=TxWqgJ" id="link">[1st Year - 2024-2025]</a>
         </section>
     </main>
 
     <footer>
-        <p>&lt;/&gt; Explore more on Har Ashish Arora's Space &copy; 2024</p>
+        <p>&lt;/&gt; Har Ashish Arora &copy; 2024</p>
     </footer>
 
     <button id="theme-switcher" aria-label="Toggle Theme">
