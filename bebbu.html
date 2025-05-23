@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Har Ashish Arora/My Bebbu</title>
+    <meta name="description" content="Har Ashish's Pretty Little Baby'">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function () {
+            const userPreference = localStorage.getItem('theme');
+            if (userPreference) {
+                document.documentElement.classList.add(userPreference + '-theme');
+            } else {
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (systemPrefersDark) {
+                    document.documentElement.classList.add('dark-theme');
+                } else {
+                    document.documentElement.classList.add('dark-theme'); // Default to dark theme
+                }
+            }
+        })();
+    </script>
+
+    <script>
+        // Inline script to check the theme before rendering the page
+        (function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-theme');
+            } else {
+                document.documentElement.classList.add('light-theme');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>// Hey there, my love</h1>
+            <p>// I love you mostestttt 💖 (infinte ts)!</p>
+        </div>
+        <div class="top-bar">
+            <div id="clock"></div>
+            <button id="theme-switcher" aria-label="Toggle Theme">
+                <span class="light-theme-icon">⏾</span> <span class="dark-theme-icon">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <div id="clock"
+        style="position: fixed; top: 10px; left: 10px; font-family: 'Courier New', Courier, monospace; font-size: 1.1em; color: var(--text-color);">
+    </div>
+
+    <main>
+        <section id="nav-links">
+            <nav>
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./resources">Resources</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="connect">
+            <h2>/* My Pretty little baby */</h2>
+            <p>// You can ask for flowers 🌷 </p>
+            <p>// I sit for hours ⏰ </p>
+            <p>// Telling all the blue birds 🐦 </p>
+            <p>// The bill and coo birds 🕊️ </p>
+            <p>// Pretty little baby 🧑🏻‍🦱 </p>
+            <p>// I am so in love with youuuuuu ❤️</p>
+        </section>
+
+        <section id="photo-gallery">
+            <h2>/* Us together 💕 */</h2>
+            <div class="gallery-container">
+                <img src="./images/photo1.jpg" class="gallery-image" alt="Photo 1">
+                <img src="./images/photo2.png" class="gallery-image" alt="Photo 2">
+            </div>
+        </section>        
+        
+
+    </main>
+
+    <footer>
+        <p>&lt;/&gt; Har Ashish Arora &copy; 2025</p>
+    </footer>
+
+    <button id="theme-switcher" aria-label="Toggle Theme">
+        <span class="light-theme-icon">⏾</span> <span class="dark-theme-icon">☀️</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

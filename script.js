@@ -55,3 +55,17 @@ function updateClock() {
 updateClock();
 // Update the time every second
 setInterval(updateClock, 1000);
+
+// Animated Gallery Script
+const galleryImages = document.querySelectorAll('.gallery-image');
+let currentImageIndex = 0;
+
+function switchImage() {
+    galleryImages[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+    galleryImages[currentImageIndex].classList.add('active');
+}
+
+// Start slideshow
+setInterval(switchImage, 4000); // Change image every 4 seconds
+
